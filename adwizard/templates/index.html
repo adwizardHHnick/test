@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Adwizard Test</title>
+		<link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<h1>Adwizard Test</h1>
+		<p>Генерация нового ключа:</p>
+		<input type="text" class="form-control" value="curl http://localhost:8000/key/new">
+		<p>Проверка ключа:</p>
+		<input type="text" class="form-control" value="curl http://localhost:8000/key/9999">
+		<p>Использовать ключ:</p>
+		<input type="text" class="form-control" value="curl -X POST http://localhost:8000/key/9999/set_used">
+		<p>Количество невыданных ключей:</p>
+		<input type="text" class="form-control" value="curl http://localhost:8000/key/remain">
+	</body>
+</html>
