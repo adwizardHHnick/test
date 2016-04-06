@@ -1,7 +1,7 @@
 from django.db import models
 
 class Key(models.Model):
-	token = models.CharField(max_length = 4)
+	token = models.CharField(max_length = 4, unique=True)
 	is_used = models.BooleanField(default = False)
 	
 	def set_used(self):
